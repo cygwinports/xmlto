@@ -1,0 +1,11 @@
+DESCRIPTION="Converts XML to various formats"
+HOMEPAGE="https://fedorahosted.org/xmlto/"
+SRC_URI="https://fedorahosted.org/releases/x/m/xmlto/${P}.tar.gz"
+
+CYGCONF_ARGS="--with-backend=dblatex"
+
+src_compile() {
+	cd ${B}
+	cygconf
+	cygmake
+}
