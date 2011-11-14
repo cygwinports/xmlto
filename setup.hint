@@ -1,5 +1,5 @@
 category: Doc Text
-requires: bash coreutils dblatex docbook-xml42 docbook-xsl findutils libxml2 libxslt util-linux w3m
+requires: bash coreutils dblatex docbook-xsl findutils libxml2 libxslt util-linux w3m
 sdesc: "Converts XML to various formats"
 ldesc: "xmlto is a shell-script tool for converting XML files to various 
 formats. At the moment it supports conversion from docbook, xhtml1 and 
