@@ -1,0 +1,20 @@
+NAME="xmlto"
+VERSION=0.0.25
+RELEASE=1
+CATEGORY="Text"
+SUMMARY="Converts XML to various formats"
+DESCRIPTION="xmlto is a shell-script tool for converting XML files to various
+formats. At the moment it supports conversion from docbook, xhtml1 and fo
+format to various output formats (awt, fo, htmlhelp, javahelp, mif, pdf, svg,
+xhtml, dvi, html, html-nochunks, man , pcl, ps, txt, xhtml-nochunks)."
+REQUIRES="dblatex docbook-xsl libxml2 libxslt util-linux w3m"
+HOMEPAGE="https://fedorahosted.org/xmlto/"
+SRC_URI="https://fedorahosted.org/releases/x/m/xmlto/${P}.tar.gz"
+
+CYGCONF_ARGS="--with-backend=dblatex"
+
+src_compile() {
+	cd ${B}
+	cygconf
+	cygmake
+}
